@@ -1,6 +1,10 @@
 FROM ghcr.io/openfaas/of-watchdog:0.9.8 as watchdog
 FROM python:3.10-alpine
 
+ARG REPO_URL
+
+LABEL org.opencontainers.image.source $REPO_URL
+
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
