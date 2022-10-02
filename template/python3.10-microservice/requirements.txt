@@ -3,6 +3,4 @@ flask-cors
 waitress
 python-dotenv
 requests
-hvac
 paste
-graypy
