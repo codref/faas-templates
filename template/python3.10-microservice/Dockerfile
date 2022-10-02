@@ -1,4 +1,4 @@
-FROM openfaas/of-watchdog:0.7.7 as watchdog
+FROM ghcr.io/openfaas/of-watchdog:0.9.8 as watchdog
 FROM python:3.10-alpine
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
